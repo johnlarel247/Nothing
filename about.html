@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - John Larel Website Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #571111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Toggle Button */
+        .toggle-button {
+            background-color: #571111;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            padding: 5px;
+            cursor: pointer;
+            display: block; /* Always show toggle button */
+            margin-top: -40px;
+        }
+
+        /* Navigation Styles */
+        .links {
+            position: absolute;
+            top: 80px; /* Positioned below the fixed header */
+            left: 0;
+            width: 100%;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .links.expanded {
+            display: flex; /* Show when expanded */
+        }
+
+        .links ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .links ul li {
+            margin: 0px 0;
+        }
+
+        .links ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+            background-color: #571111; /* Background only for the link */
+            display: inline-flex; /* Apply background only around the text */
+        }
+
+        .links ul li a:hover {
+            background-color: #ffcc00; /* Hover background */
+            color: #571111; /* Hover text color */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-col {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .about-col-1 {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 10px;
+        }
+
+        .about-col-1 img {
+            width: 100%;
+            border-radius: 8px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-col-2 {
+            flex: 2;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .sub-title {
+            font-size: 28px;
+            color: #571111;
+            margin: 20px 0;
+        }
+
+        .sub-title2 {
+            font-size: 24px;
+            color: #571111;
+            margin: 15px 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-col {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-col-1,
+            .about-col-2 {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h2>John Larel Website Portfolio</h2>
+        <button class="toggle-button">☰</button>
+        <nav class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="about">
+            <div class="about-col">
+                <div class="about-col-1">
+                    <img src="FAM.JPG" alt="About me image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is John Larel H. Borejon, and I am currently pursuing a Bachelor of Science in Information Technology with a major in Service Management at Laguna State Polytechnic University. This program has enhanced my problem-solving skills and helped me develop effective communication and client interaction abilities, as it is centered around client-based services.</p>
+                    <h1 class="sub-title2">Personal Life</h1>
+                    <p>Outside of school, I enjoy attending church every Sunday and actively participating in our community. Learning about God's miracles inspires hope in my daily life. I also start my mornings with a walk at 4:00 AM to clear my mind before heading to school. Additionally, playing sports like badminton and watching movies with my friends and family bring me happiness and make me feel rejuvenated.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Toggle Button Logic
+        const toggleButton = document.querySelector('.toggle-button');
+        const navLinks = document.querySelector('.links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('expanded');
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
